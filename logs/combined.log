@@ -137,3 +137,4 @@
 {"level":"info","message":"::1 - - [17/Jun/2026:16:03:30 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 500 1232 \"-\" \"HTTPie\"","service":"acquisitions-api"}
 {"level":"info","message":"::1 - - [17/Jun/2026:16:05:27 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 400 92 \"-\" \"HTTPie\"","service":"acquisitions-api"}
 {"level":"info","message":"::1 - - [17/Jun/2026:16:05:55 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 400 92 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [18/Jun/2026:03:58:26 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 400 92 \"-\" \"HTTPie\"","service":"acquisitions-api"}
