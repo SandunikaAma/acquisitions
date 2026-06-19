@@ -2,7 +2,7 @@ import logger from '#config/logger.js';
 import bcrypt from 'bcrypt';
 import { eq } from 'drizzle-orm';
 import { db } from '#config/database.js';
-import { user } from '#models/user.model.js';
+import { users } from '#models/user.model.js';
 
 export const hashPassword = async password => {
   try {
@@ -26,8 +26,8 @@ export const createUser = async ({ name, email, password, role = 'user' }) => {
   try {
     const existingUser = await db
       .select()
-      .from(user)
-      .where(eq(user.email, email))
+      .from(users)
+      .where(eq(users.email, email))
       .limit(1);
 
     if (existingUser.length > 0)
@@ -36,14 +36,14 @@ export const createUser = async ({ name, email, password, role = 'user' }) => {
     const password_hash = await hashPassword(password);
 
     const [newUser] = await db
-      .insert(user)
+      .insert(users)
       .values({ name, email, password: password_hash, role })
       .returning({
-        id: user.id,
-        name: user.name,
-        email: user.email,
-        role: user.role,
-        created_at: user.created_at,
+        id: users.id,
+        name: users.name,
+        email: users.email,
+        role: users.role,
+        created_at: users.created_at,
       });
 
     logger.info(`User ${newUser.email} created successfully`);
@@ -58,8 +58,8 @@ export const authenticateUser = async ({ email, password }) => {
   try {
     const [existingUser] = await db
       .select()
-      .from(user)
-      .where(eq(user.email, email))
+      .from(users)
+      .where(eq(users.email, email))
       .limit(1);
 
     if (!existingUser) {

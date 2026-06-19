@@ -38,12 +38,14 @@ echo ""
 echo "📜 Applying latest schema with Drizzle..."
 npm run db:migrate
 
-# Wait for the database to be ready
-echo "⏳ Waiting for the database to be ready..."
-docker compose exec neon-local psql -U neon -d neondb -c 'SELECT 1'
+# Start containers first
+docker-compose -f docker-compose.dev.yml up -d --build
 
-# Start development environment
-docker compose -f docker-compose.dev.yml up --build
+echo "⏳ Waiting for database..."
+
+sleep 8
+
+docker compose -f docker-compose.dev.yml exec -T neon-local psql -U neon -d neondb -c "SELECT 1"
 
 echo ""
 echo "🎉 Development environment started!"
