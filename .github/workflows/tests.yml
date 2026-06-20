@@ -74,4 +74,4 @@ jobs:
         if: failure()
         run: |
           echo "::error::Test suite failed - please check the test output for specific failure details"
-          echo "::notice::Run 'npm test' locally to reproduce and debug the failing tests"
+          echo "::notice::Run 'npm test' locally to reproduce and debug the failing tests"git

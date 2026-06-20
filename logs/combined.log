@@ -412,3 +412,10 @@
 {"level":"info","message":"User authenticated: bbb@gmail.com (admin)","service":"acquisitions-api"}
 {"level":"info","message":"Updating user: 8","service":"acquisitions-api"}
 {"level":"info","message":"::ffff:192.168.65.1 - - [19/Jun/2026:05:01:35 +0000] \"PUT /api/users/8 HTTP/1.1\" 400 88 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [19/Jun/2026:06:16:28 +0000] \"GET /api HTTP/1.1\" 200 40 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [19/Jun/2026:06:16:28 +0000] \"GET /nonexsistent HTTP/1.1\" 400 27 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [19/Jun/2026:06:17:45 +0000] \"GET /api HTTP/1.1\" 200 40 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [19/Jun/2026:06:17:45 +0000] \"GET /nonexsistent HTTP/1.1\" 400 27 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [19/Jun/2026:15:49:18 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [19/Jun/2026:15:49:18 +0000] \"GET /api HTTP/1.1\" 200 40 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [19/Jun/2026:15:49:18 +0000] \"GET /nonexsistent HTTP/1.1\" 404 27 \"-\" \"-\"","service":"acquisitions-api"}
