@@ -1,13 +1,16 @@
 # Acquisitions API - Warp Project Guide
 
 ## Overview
+
 This is a Node.js + Express API project using:
+
 - ES Modules (`"type": "module"`)
 - Drizzle ORM with PostgreSQL
 - Zod for request validation
 - ESLint + Prettier for code quality
 
 ## Project Structure
+
 - `src/index.js` - entry point
 - `src/server.js` - starts HTTP server
 - `src/routes/` - route definitions
@@ -19,6 +22,7 @@ This is a Node.js + Express API project using:
 - `src/validations/` - Zod schemas
 
 ## Setup
+
 1. Install dependencies:
    - `npm install`
 2. Create/update `.env` with your values:
@@ -28,10 +32,12 @@ This is a Node.js + Express API project using:
    - `DATABASE_URL={{DATABASE_URL}}`
 
 ## Development
+
 - Run dev server:
   - `npm run dev`
 
 ## Database (Drizzle)
+
 - Generate migrations:
   - `npm run db:generate`
 - Run migrations:
@@ -40,6 +46,7 @@ This is a Node.js + Express API project using:
   - `npm run db:studio`
 
 ## Code Quality
+
 - Lint:
   - `npm run lint`
 - Auto-fix lint issues:
@@ -50,10 +57,12 @@ This is a Node.js + Express API project using:
   - `npm run format:check`
 
 ## Current Auth Routes
+
 - `POST /sign-up`
 - `POST /sign-in`
 - `POST /sign-out`
 
 ## Notes
+
 - Server default URL: `http://localhost:3000`
 - Start from project root before running scripts.

@@ -1,7 +1,15 @@
 import logger from '#config/logger.js';
-import { userIdSchema, updateUserSchema,} from '#validations/users.validation.js';
+import {
+  userIdSchema,
+  updateUserSchema,
+} from '#validations/users.validation.js';
 import { formatValidationError } from '#utils/format.js';
-import { getAllUsers, getUserById, updateUser, deleteUser  } from '#src/services/users.services.js';
+import {
+  getAllUsers,
+  getUserById,
+  updateUser,
+  deleteUser,
+} from '#src/services/users.services.js';
 
 export const fetchAllUsers = async (req, res, next) => {
   try {
